@@ -210,6 +210,10 @@ activation_7 (Activation)    (None, 7)                 0
 Total params: 6,912,199
 Trainable params: 6,912,199
 Non-trainable params: 0
+
+总参数:6912199
+可训练的参数:6912199
+Non-trainable参数:0
 _________________________________________________________________
 model built
 Found 28709 images belonging to 7 classes.
