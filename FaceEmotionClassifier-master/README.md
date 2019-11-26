@@ -1,3 +1,4 @@
+# 转载 非原创 
 # 人脸情绪识别与emoji转换(FaceEmotionClassifier)
 
 用Keras做前端，tensorflow做后端训练模型识别人类的情绪。根据情绪选择相应的emoji匹配 
