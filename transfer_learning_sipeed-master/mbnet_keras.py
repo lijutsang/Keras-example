@@ -10,7 +10,7 @@ from keras.applications import imagenet_utils
 from keras.layers import Dense, GlobalAveragePooling2D, Dropout
 from mobilenet_sipeed.mobilenet import MobileNet
 from keras.applications.mobilenet import preprocess_input
-
+#处理图片 def prepare_image（file）函数负责样本图像的图像预处理（调整大小并转换为numpy数组）
 def prepare_image(file):
     img_path = ''
     img = image.load_img(img_path + file, target_size=(128, 128))
