@@ -64,7 +64,7 @@ from gensim import corpora
 from gensim import models
 from gensim import similarities
 
-l1 = ["你的名字是什么", "你今年几岁了", "你有多高你胸多大", "你胸多大"]
+l1 = ["你的名字是什么", "你今年几岁了", "你有多高你多重", "你体重多少"]
 a = "你今年多大了"
 
 all_doc_list = []
