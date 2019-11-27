@@ -24,6 +24,7 @@ ncc compile ./my_model/mymodel.tflite ./my_model/my.kmodel -i tflite -o kmodel -
 
 ### 测试h5模型 test.py
 ```
+model = models.load_model(dir_path +'/my_model/my_model.h5')
 def test():
     preprocessed_image = prepare_image(dir_path +'\\santa.jpg')
     predictions_santa = model.predict(preprocessed_image) 
