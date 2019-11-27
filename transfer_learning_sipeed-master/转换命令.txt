@@ -1,0 +1,1 @@
+ncc compile ./my_model/mymodel.tflite ./my_model/my.kmodel -i tflite -o kmodel -t k210 --dataset ./images
