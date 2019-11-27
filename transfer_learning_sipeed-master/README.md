@@ -21,6 +21,7 @@ tflite_convert  --output_file=model.tflite \   --keras_model_file=my_model.h5
 ```
 ncc compile ./my_model/mymodel.tflite ./my_model/my.kmodel -i tflite -o kmodel -t k210 --dataset ./images
 ```
+！[ncc](https://github.com/lijutsang/Keras-example/blob/master/transfer_learning_sipeed-master/ncc.png)
 
 ### 测试h5模型 test.py
 ```
