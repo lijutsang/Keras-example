@@ -10,7 +10,7 @@ import os
 dir_path = os.path.abspath(os.path.dirname(__file__))
 
 mobile = keras.applications.mobilenet.MobileNet()
-model = models.load_model(dir_path +'/my_model.h5')
+model = models.load_model(dir_path +'/my_model/my_model.h5')
 
 def prepare_image(file):
     img_path = ''
@@ -27,22 +27,13 @@ def my_prepare_image(file):
     img_array_expanded_dims = np.expand_dims(img_array, axis=0)
     return keras.applications.mobilenet.preprocess_input(img_array_expanded_dims)
 def test():
-    preprocessed_image = my_prepare_image(dir_path +'\\24.jpg')
-    predictions = model.predict(preprocessed_image)
-    print(predictions)
-
-    preprocessed_image = my_prepare_image(dir_path +'\\48.jpg')
-    predictions = model.predict(preprocessed_image)
-    print(predictions)
-
-
-    preprocessed_image = prepare_image(dir_path +'\\24.jpg')
+    preprocessed_image = prepare_image(dir_path +'\\santa.jpg')
     predictions_santa = model.predict(preprocessed_image) 
     print("image is Santa") 
     print(predictions_santa[0][1]*100,"%") 
     print("is Uno") 
     print(predictions_santa[0][0]*100,"%")                       
-    preprocessed_image = prepare_image(dir_path +'\\48.jpg') 
+    preprocessed_image = prepare_image(dir_path +'\\uno.jpg') 
     predictions_uno = model.predict(preprocessed_image) 
     print("Santa") 
     print(predictions_uno[0][1]*100,"%") 
@@ -56,12 +47,12 @@ def test_mobile():
     results = imagenet_utils.decode_predictions(predictions)
     print(results)
 
-    preprocessed_image = prepare_image(dir_path +'\\24.jpg')
+    preprocessed_image = prepare_image(dir_path +'\\santa.jpg')
     predictions = mobile.predict(preprocessed_image)
     results = imagenet_utils.decode_predictions(predictions)
     print(results)
 
-    preprocessed_image = prepare_image(dir_path +'\\48.jpg')
+    preprocessed_image = prepare_image(dir_path +'\\uno.jpg')
     predictions = mobile.predict(preprocessed_image)
     results = imagenet_utils.decode_predictions(predictions)
     print(results)
