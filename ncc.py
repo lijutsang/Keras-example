@@ -12,11 +12,16 @@ os.system(ncc_path + "\\ncc\\ncc " + ncc_path + "\\model\\mymodel.tflite "+ ncc_
 # -*- encoding: utf-8 -*-
 import os
 
-ncc_path ='C:\\mPythonFile\\python\\packs\\ncc'
-if os.system(ncc_path + "\\ncc\\ncc " + ncc_path + "\\model\\mymodel.tflite "+ ncc_path + "\\model\\my4.kmodel " + "-i tflite -o k210model --dataset " + ncc_path + "\\test") == 0:
+model_path = 'C:\\mPythonFile\\python\\packs\\ncc\\model'
+ncc_path ='C:\\mPythonFile\\python\\packs\\ncc\\ncc\\ncc'
+tflite_path = 'C:\\mPythonFile\\python\\packs\\ncc\\model\\mymodel.tflite'
+kmodel_path = 'C:\\mPythonFile\\python\\packs\\ncc\\model\\test.kmodel'
+data = 'C:\\mPythonFile\\python\\packs\\ncc\\test'
+
+convert_kmodel = "{ncc} {tflite} {kmodel} -i tflite -o k210model --dataset {data}".format(ncc=ncc_path,tflite=tflite_path,kmodel=kmodel_path,data=data)
+
+if os.system(convert_kmodel) == 0:
     print("\n转换模型成功!")
-if os.system(ncc_path + "\\ncc\\ncc --version") == 0:
-    print("\nncc版本!")
     
 '''
 
