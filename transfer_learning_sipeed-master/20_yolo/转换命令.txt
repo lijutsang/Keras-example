@@ -1,0 +1,7 @@
+ncc compile ./model/20classes_yolo.tflite ./model/win10.kmodel -i tflite -o kmodel -t k210 --dataset ./images
+
+ncc compile ./model/20classes_yolo.tflite ./model/win10.kmodel -i tflite -o k210model --dataset ./images
+
+ncc ./model/20classes_yolo.tflite ./model/win10.kmodel -i tflite -o k210model --dataset ./images
+
+ncc ./model/mymodel.tflite ./model/test.kmodel -i tflite -o k210model --dataset ./test
