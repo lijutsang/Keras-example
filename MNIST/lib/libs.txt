@@ -1,0 +1,1 @@
+tensorflow==1.14.0,numpy,setuptools,matplotlib,opencv-python,scikit-learn
